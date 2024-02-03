@@ -6,11 +6,13 @@ import Counter from './components/counter';
 function App() {
 
   return (
-    <div className='App'>
-      <Provider store={store}>
+
+    <Provider store={store}>
+      <div className='App'>
         <Counter />
-      </Provider>
-    </div>
+      </div>
+    </Provider>
+
   );
 }
 
