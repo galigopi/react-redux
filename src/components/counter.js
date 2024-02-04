@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { increment, decrement, incrementbyAmount, decrementbyAmount, fetchtodos, resetStore } from '../slices/counterSlices'
+// import axios from 'axios'
 
 const Counter = () => {
     const [num, setNum] = useState()
@@ -13,6 +14,11 @@ const Counter = () => {
             .then(response => response.json().then(response => setData(response)))
             .catch((err) => console.log('fetch call error'))
     }, [])
+    // useEffect(() => {
+    //     axios.get('http://localhost:8080/status')
+    //         .then(response =>console.log(response))
+    //         .catch((err) => console.log('fetch call error'))
+    // }, [])
 
     const { studentData, value } = stateapiData;
     return (
