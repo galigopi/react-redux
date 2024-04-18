@@ -19,6 +19,7 @@ const Counter = () => {
     //         .then(response =>console.log(response))
     //         .catch((err) => console.log('fetch call error'))
     // }, [])
+       
 
     const { studentData, value } = stateapiData;
     return (
